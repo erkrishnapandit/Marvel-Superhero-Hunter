@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #33ccff, #ff99cc);
+}
+
+nav {
+    display: flex;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    text-decoration: none;
+    text-decoration-style: none;
+    list-style: none;
+    align-items: end;
+    margin: 4px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: #33ccff;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav #logo {
+    height: 35px;
+    width: 120px;
+    margin: 4px;
+}
+
+#titleName {
+    text-align: center;
+    margin: 10px;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    background: white;
+    border: 1px solid black;
+    display: flex;
+    width: 55%;
+    margin: 10px auto;
+    height: 45px;
+    border-radius: 50px;
+    justify-content: space-between;
+}
+
+form input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 16px;
+    background: transparent;
+}
+
+form button {
+    border: none;
+    width: 20%;
+    height: 100%;
+    font-size: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: rgb(224, 224, 224);
+}
+
+form button:hover {
+    background: rgb(170, 170, 170);
+}
+
+
+#app {
+    width: 100vw;
+    height: 93vh;
+}
+
+#app-name-and-search-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#superhero-list-container {
+    width: 90%;
+    margin: 50px auto 50px;
+    grid-gap: 50px;
+}
+
+#search-container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#search-container a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: rgb(244, 245, 255);
+    margin-left: -20px;
+}
+
+
+#superhero-list-container {
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+#superhero-list-container::-webkit-scrollbar {
+    width: 10px
+}
+
+#superhero-list-container::-webkit-scrollbar-track {
+    background: rgb(7, 7, 94, .3);
+    border-radius: 20px;
+}
+
+#superhero-list-container::-webkit-scrollbar-thumb {
+    background: white;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+
+.superhero-container {
+    width: 20%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 2px;
+    box-shadow: 0 0 10px 2px rgb(0, 0, 0);
+}
+
+.superhero-image-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.superhero-image-container img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(0, 0, 0);
+}
+
+.superhero-body-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(225, 225, 225);
+}
+
+.superhero-body-container p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.superhero-detail-link {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    background: #006dea;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(0, 0, 0);
+}
+
+.superhero-detail-link a {
+    text-align: center;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.superhero-detail-link span {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.superhero-detail-link a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.add-to-favorite i:hover {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: red;
+}
+
+@media screen and (max-width:1020px) {
+    .superhero-container {
+        width: 21%;
+        height: 70%;
+    }
+
+    .superhero-name-container {
+        font-size: 1rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #search-container form {
+        width: 150%;
+        height: 100%;
+    }
+
+    #search-container a {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .superhero-container {
+        width: 35%;
+        height: 70%;
+    }
+
+    #search-container form {
+        width: 200%;
+        height: 100%;
+    }
+
+    #search-container a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .superhero-container {
+        width: 40%;
+        height: 70%;
+    }
+
+    #search-container form {
+        width: 200%;
+        height: 100%;
+    }
+
+    #search-container a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .superhero-container {
+        width: 60%;
+        height: 70%;
+    }
+
+    #app-name-and-search-container h3 {
+        font-size: 1.5rem;
+    }
+
+    #search-container form button {
+        font-size: .8rem;
+    }
+
+    #search-container a {
+        font-size: 1rem;
+        color: white;
+    }
+
+    #search-container a:hover {
+        font-size: 1rem;
+    }
+}
