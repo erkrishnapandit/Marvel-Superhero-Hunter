@@ -1,13 +1,16 @@
+/* Removing default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Styling to background color */
 body {
     background: linear-gradient(135deg, #33ccff, #ff99cc);
 }
 
+/* Styling to navigation bar */
 nav {
     display: flex;
     background-color: black;

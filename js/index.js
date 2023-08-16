@@ -95,7 +95,7 @@ function getSuperherosDetails() {
                 while (superheroListContainer.firstChild) {
                     superheroListContainer.removeChild(superheroListContainer.lastChild)
                 }
-                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white;">"no superhero exists with " ${input} " name"</h1>`);
+                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white;">No Superhero Exists With Name: "${input}"</h1>`);
                 return;
             }
         })
@@ -209,6 +209,15 @@ function getSuperherosByExactName(input) {
             while (superheroListContainer.firstChild) {
                 superheroListContainer.removeChild(superheroListContainer.lastChild)
             }
+
+            // if response.data.results array is empty so remove all node from dom and add an text to  superheroListContainer no superhero exists with given name
+            if (results.length === 0) {
+                while (superheroListContainer.firstChild) {
+                    superheroListContainer.removeChild(superheroListContainer.lastChild)
+                }
+                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white; text-decoration:none;">No Superhero Exists With Name: "${input}"</h1>`);
+                return;
+            }
          
             //finding current superhero(results[i]) is already in our favorite or not
             let isFavorite = false;
@@ -254,15 +263,6 @@ function getSuperherosByExactName(input) {
             createSuperheroContainer(results[0]);
             //fetch elements/nodes that added by js to dom and also add event listener to some of them
             fetchElement();
-
-            // if response.data.results array is empty s,o remove all node from dom and add an text to  superheroListContainer no superhero exists wi th
-            if (results.length === 0) {
-                while (superheroListContainer.firstChild) {
-                    superheroListContainer.removeChild(superheroListContainer.lastChild)
-                }
-                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white;">No Superhero Exists With Name: "${input}"</h1>`);
-                return;
-            }
         })
         .catch((err) => {
             console.log("error while api request-reasponse", err);

@@ -1,13 +1,16 @@
+/* Removing Default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Background color styling */
 body {
     background: linear-gradient(135deg, #33ccff, #ff99cc);
 }
 
+/* Navigation bar styling */
 nav {
     display: flex;
     background-color: black;
@@ -46,18 +49,15 @@ nav #logo {
     margin: 4px;
 }
 
-#titleName {
+/* Styling to title name */
+h1 {
     text-align: center;
     margin: 10px;
     font-size: 50px;
     text-decoration: underline;
 }
 
-h1 {
-    text-align: center;
-    font-size: 30px;
-}
-
+/* Styling to input form */
 form {
     background: white;
     border: 1px solid black;
@@ -95,7 +95,7 @@ form button:hover {
     background: rgb(170, 170, 170);
 }
 
-
+/* Styling to result container */
 #app {
     width: 100vw;
     height: 93vh;
@@ -146,6 +146,7 @@ form button:hover {
     padding: 15px;
 }
 
+/* Adding webkit scrollbar to result container */
 #superhero-list-container::-webkit-scrollbar {
     width: 10px
 }
@@ -161,7 +162,7 @@ form button:hover {
     border-radius: 20px;
 }
 
-
+/* Styling to superhero container */
 .superhero-container {
     width: 20%;
     height: 70%;
@@ -236,6 +237,7 @@ form button:hover {
     color: red;
 }
 
+/* Adding Responsivness styling */
 @media screen and (max-width:1020px) {
     .superhero-container {
         width: 21%;
