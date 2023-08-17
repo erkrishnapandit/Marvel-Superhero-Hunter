@@ -185,7 +185,7 @@ function getSuperherosNameStartsWith(input) {
                 while (superheroListContainer.firstChild) {
                     superheroListContainer.removeChild(superheroListContainer.lastChild)
                 }
-                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white;">No Superhero Exists With Name: "${input}"</h1>`);
+                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white; text-decoration:none;">No Superhero Exist With Name:- "${input}"</h1>`);
                 return;
             }
         })
@@ -215,7 +215,7 @@ function getSuperherosByExactName(input) {
                 while (superheroListContainer.firstChild) {
                     superheroListContainer.removeChild(superheroListContainer.lastChild)
                 }
-                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white; text-decoration:none;">No Superhero Exists With Name: "${input}"</h1>`);
+                superheroListContainer.insertAdjacentHTML('afterbegin', `<h1 style="color:white; text-decoration:none;">No Superhero Exist With Name:- "${input}"</h1>`);
                 return;
             }
          
@@ -274,7 +274,7 @@ let favoriteSuperheros = [
     //  {
     // id:"34",
     // imgUrl:"url",
-    // name:"hulk",
+    // name:"iron-man",
     // description:"",
     // series:,
     // stories:.
