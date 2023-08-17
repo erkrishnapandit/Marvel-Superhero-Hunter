@@ -51,7 +51,7 @@ function createSuperheroContainer(superheroDetail){
 //calling function with superhero detail to add html to an  navigation And Superhero Detail Container
 if(superheroDetail == null || superheroDetail.length == 0){
     navigationAndSuperheroDetailContainer.insertAdjacentHTML('afterbegin',`
-        <h1 style="color:white; text-decoration:none;">Please Select Character To Get-Details</h1>
+        <h1 style="color:white; text-decoration:none;">"Please Select Any Character To Get-Details"</h1>
     `);
 }else{
     createSuperheroContainer(superheroDetail);
